@@ -1,0 +1,25 @@
+@import 'colors';
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-columns: 100%;
+}
+
+$image-dia: 256px;
+
+.image {
+	width: 264px;
+	height: 264px;
+	display: grid;
+	place-content: center;
+	border-radius: 50%;
+	background: $white-color;
+	img {
+		width: $image-dia !important;
+		height: $image-dia !important;
+		border-radius: 50%;
+	}
+}
