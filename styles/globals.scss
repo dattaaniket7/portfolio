@@ -1,0 +1,29 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	background: $black-color;
+	color: $white-color;
+}
+
+a {
+	text-decoration: none;
+	color: $orange-color;
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		color: $green-color;
+	}
+}
