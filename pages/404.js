@@ -15,13 +15,20 @@ export default function PageNotFound() {
 				<h1 className={s.h404}>
 					4<span>
 						<div />
-						<img src="/images/cartoon-2026643_960_720.webp" />
+						<div className={s.sat}>
+							<span>
+								<img src="/images/satellite.png" />
+							</span>
+						</div>
+						<img src="/images/cartoon-2026643_960_720.webp" alt="Moon representing 0" />
 					</span>4
 				</h1>
 				<h4>You have reached the dark side of the moon, don't worry, you can still go back...</h4>
 				<Link href="/">Homepage</Link>
 			</div>
-			<Footer />
+			<footer className={s.footer}>
+				Made with 💗 by <a href="https://www.aniketdatta.rocks/">Aniket Datta</a>
+			</footer>
 		</div>
 	);
 }
