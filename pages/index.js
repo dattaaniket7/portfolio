@@ -8,6 +8,7 @@ import Social48pxGlyph1_logoInstagram from '../components/icons/social-48px-glyp
 import Social48pxGlyph1_logoGithub from '../components/icons/social-48px-glyph-1_logo-github';
 import Social48pxGlyph1_logoLinkedIn from '../components/icons/social-48px-glyph-1_logo-linkedin';
 import Social48pxGlyph1_logoTwitter from '../components/icons/social-48px-glyph-1_logo-twitter';
+import Navbar from '../components/Navbar/Navbar';
 
 export default function Home() {
 	return (
@@ -17,6 +18,7 @@ export default function Home() {
 				<meta name="description" content="Hey I am Aniket Datta." />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<Navbar />
 			<main className={styles.main}>
 				<section className={styles.info}>
 					<div className={styles.textDiv}>
