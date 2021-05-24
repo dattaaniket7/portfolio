@@ -16,7 +16,7 @@
 			left: 0;
 			background: rgba(0, 0, 0, 0.500);
 			z-index: 2;
-			animation: shadow 4s linear;
+			animation: shadow 2s linear;
 		}
 	}
 	img {
@@ -24,6 +24,28 @@
 		width: 13rem;
 		aspect-ratio: 1/1;
 		z-index: 1;
+	}
+	.sat {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		animation: sat-plane 120s linear infinite;
+		span {
+			position: absolute;
+			width: 2rem;
+			height: 2rem;
+			top: -100%;
+			left: -100%;
+			animation: sat 6s linear infinite, sat-plane 24s linear infinite;
+			animation-delay: 2s;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 
@@ -36,12 +58,40 @@
 	}
 }
 
+@keyframes sat {
+	0% {
+		top: -2rem;
+		left: -2rem;
+	}
+	50% {
+		top: calc(100% + 2rem);
+		left: calc(100% + 2rem);
+	}
+	100% {
+		top: calc(100% + 2rem);
+		left: calc(100% + 2rem);
+	}
+}
+
+@keyframes sat-plane {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
 .main {
 	width: 100%;
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background: url("/images/earth.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
 	h4 {
 		font-size: 1.3rem;
 	}
@@ -117,6 +167,44 @@
 	width: 100%;
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: 1fr auto;
+	grid-template-rows: 100%;
 	grid-template-columns: 100%;
+	background: #060608;
+	position: relative;
+}
+
+.footer {
+	width: fit-content;
+	position: absolute;
+	bottom: 0;
+	color: #1f1f1f;
+	font-weight: bold;
+	left: 50%;
+	padding-bottom: 0.5rem;
+	transform: translateX(-50%);
+	backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 768px) {
+	.h404 {
+		font-size: 5rem;
+		span {
+			width: 5rem;
+			height: 5rem;
+		}
+		img {
+			width: 5rem;
+		}
+		.sat {
+			span {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+		}
+	}
+	.main {
+		h4 {
+			text-align: center;
+		}
+	}
 }
