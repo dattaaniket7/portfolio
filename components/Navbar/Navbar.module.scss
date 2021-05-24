@@ -1,0 +1,45 @@
+@import '../../styles/colors';
+
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	ul {
+		list-style: none;
+		display: flex;
+		gap: 2rem;
+		padding: 1rem;
+	}
+	a {
+		font-weight: bold;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		&:hover {
+			color: $orange-color;
+		}
+	}
+}
+
+.activeLink {
+	a {
+		color: $green-color;
+	}
+}
+
+.link {
+	a {
+		color: $white-color;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav {
+		justify-content: center;
+		a {
+			font-size: 1rem;
+		}
+	}
+}
