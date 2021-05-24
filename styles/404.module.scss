@@ -1,0 +1,122 @@
+.h404 {
+	font-size: 16rem;
+	display: flex;
+	align-items: center;
+	span {
+		position: relative;
+		z-index: 0;
+		width: 13rem;
+		height: 13rem;
+		border-radius: 50%;
+		overflow: hidden;
+		div {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			background: rgba(0, 0, 0, 0.500);
+			z-index: 2;
+			animation: shadow 4s linear;
+		}
+	}
+	img {
+		position: absolute;
+		width: 13rem;
+		aspect-ratio: 1/1;
+		z-index: 1;
+	}
+}
+
+@keyframes shadow {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0%;
+	}
+}
+
+.main {
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h4 {
+		font-size: 1.3rem;
+	}
+	a {
+		margin-top: 2rem;
+		font-size: 2rem;
+		position: relative;
+		background: #ff5f6d;
+		background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+		background: linear-gradient(to right, #ffc371, #ff5f6d);
+		z-index: 0;
+		padding: 1rem;
+		&::before {
+			position: absolute;
+			content: '';
+			display: block;
+			width: calc(100% - 0.6rem);
+			height: calc(100% - 0.6rem);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #262a2b;
+			z-index: 1;
+		}
+		&::after {
+			position: absolute;
+			content: 'Homepage';
+			display: block;
+			background: #ff5f6d;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+			background: linear-gradient(to right, #ffc371, #ff5f6d);
+			background-clip: text;
+			color: transparent;
+			font-weight: bolder;
+			z-index: 2;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			&::before {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: #ff5f6d;
+				background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+				background: linear-gradient(to right, #ffc371, #ff5f6d);
+				z-index: 1;
+			}
+			&::after {
+				position: absolute;
+				content: 'Homepage';
+				display: block;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #262a2b;
+				font-weight: bolder;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-columns: 100%;
+}
