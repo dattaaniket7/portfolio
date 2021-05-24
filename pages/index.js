@@ -16,7 +16,7 @@ export default function Home() {
 			<Head>
 				<title>Aniket Datta 😎 | Creative Dev</title>
 				<meta name="description" content="Hey I am Aniket Datta." />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/images/favicon.ico" />
 			</Head>
 			<Navbar />
 			<main className={styles.main}>
@@ -35,27 +35,27 @@ export default function Home() {
 							</p>
 							<ul>
 								<li>
-									<a>
+									<a href="https://www.facebook.com/dattaaniket7/" target="_blank">
 										<Social48pxGlyph1_logoFbSimple />
 									</a>
 								</li>
 								<li>
-									<a>
+									<a href="https://www.instagram.com/a.d_floyd/" target="_blank">
 										<Social48pxGlyph1_logoInstagram />
 									</a>
 								</li>
 								<li>
-									<a>
+									<a href="https://github.com/dattaaniket7" target="_blank">
 										<Social48pxGlyph1_logoGithub />
 									</a>
 								</li>
 								<li>
-									<a>
+									<a href="https://www.linkedin.com/in/dattaaniket7/" target="_blank">
 										<Social48pxGlyph1_logoLinkedIn />
 									</a>
 								</li>
 								<li>
-									<a>
+									<a href="https://twitter.com/dattaaniket7" target="_blank">
 										<Social48pxGlyph1_logoTwitter />
 									</a>
 								</li>
