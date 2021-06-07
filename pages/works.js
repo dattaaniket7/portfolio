@@ -5,9 +5,9 @@ import Head from 'next/head';
 import ReactGA from 'react-ga';
 
 export default function Works() {
-	useEffect(() => {
-		ReactGA.pageview(window.location.pathname + window.location.search, 'Works');
-	}, []);
+	// useEffect(() => {
+	// 	ReactGA.pageview(window.location.pathname + window.location.search, 'Works');
+	// }, []);
 	return (
 		<div className={s.main}>
 			<Head>

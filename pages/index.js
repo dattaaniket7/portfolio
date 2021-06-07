@@ -13,9 +13,9 @@ import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
 export default function Home() {
-	useEffect(() => {
-		ReactGA.pageview(window.location.pathname + window.location.search, 'Homepage');
-	}, []);
+	// useEffect(() => {
+	// 	ReactGA.pageview(window.location.pathname + window.location.search, 'Homepage');
+	// }, []);
 
 	return (
 		<div className={styles.container}>
