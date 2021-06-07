@@ -2,8 +2,12 @@ import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
 import s from '../styles/404.module.scss';
 import Link from 'next/link';
+import ReactGA from 'react-ga';
 
 export default function PageNotFound() {
+	// useEffect(() => {
+	// 	ReactGA.pageview(window.location.pathname + window.location.search,'Page Not Found' );
+	// }, []);
 	return (
 		<div className={s.container}>
 			<Head>

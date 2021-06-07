@@ -3,8 +3,12 @@ import Navbar from '../components/Navbar/Navbar';
 import s from '../styles/ContactMe.module.scss';
 import Head from 'next/head';
 import { useForm, ValidationError } from '@formspree/react';
+import ReactGA from 'react-ga';
 
 export default function Works() {
+	// useEffect(() => {
+	// 	ReactGA.pageview(window.location.pathname + window.location.search, 'Conatct Me');
+	// }, []);
 	const [ state, handleSubmit ] = useForm('mleabege');
 	return (
 		<div className={s.inner}>
