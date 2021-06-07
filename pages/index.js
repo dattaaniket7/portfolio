@@ -9,8 +9,14 @@ import Social48pxGlyph1_logoGithub from '../components/icons/social-48px-glyph-1
 import Social48pxGlyph1_logoLinkedIn from '../components/icons/social-48px-glyph-1_logo-linkedin';
 import Social48pxGlyph1_logoTwitter from '../components/icons/social-48px-glyph-1_logo-twitter';
 import Navbar from '../components/Navbar/Navbar';
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
 
 export default function Home() {
+	useEffect(() => {
+		ReactGA.pageview(window.location.pathname + window.location.search, 'Homepage');
+	}, []);
+
 	return (
 		<div className={styles.container}>
 			<Head>

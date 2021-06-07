@@ -2,8 +2,10 @@ import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import s from '../styles/UnderConstruction.module.scss';
 import Head from 'next/head';
+import ReactGA from 'react-ga';
 
 export default function Works() {
+	ReactGA.pageview(window.location.pathname + window.location.search, 'Skills');
 	return (
 		<div className={s.main}>
 			<Head>
