@@ -13,12 +13,13 @@ class MyDocument extends Document {
 					<script async src="https://www.googletagmanager.com/gtag/js?id=UA-198890002-1" />
 
 					<script
+						type="text/javascript"
 						dangerouslySetInnerHTML={{
 							__html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'UA-198890002-1', { page_path: window.location.pathname });
+              gtag('config', 'UA-198890002-1');
             `
 						}}
 					/>
